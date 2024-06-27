@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-principal: #5A639C;
+    --cor-secundaria: #7776B3;
+    --cor-terciaria: #9B86BD;
+    --cor-quaternaria: #E2BBE9;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--cor-terciaria);
+    color: #000;
+    padding: 0px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative; /* Para o dropdown */
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+/* Dropdowns */
+.account-dropdown, .services-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--cor-secundaria);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.account-dropdown a, .services-dropdown a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.account-dropdown a:hover, .services-dropdown a:hover {
+    background: #000;
+}
+
+
+/* Estilos específicos da página de empréstimos */
+.loan-hero {
+    background: var(--cor-quaternaria);
+    color: #000;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.loan-hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.loan-hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.loan-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: var(--cor-quaternaria);
+}
+
+.loan {
+    background: var(--cor-terciaria);
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.loan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.loan p {
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilos do Footer */
+/* Estilos do Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin-top: auto; /* Empurra o footer para a parte inferior */
+}
+
+footer p {
+    margin: 0;
+}
